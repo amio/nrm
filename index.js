@@ -1,9 +1,14 @@
+const padEnd = require('string.prototype.padend')
 const exec = require('child_process').exec
 const args = require('minimist')(process.argv.slice(2))
 
 const registries = require('./registries.json')
 const subCommand = args._[0] || ''
 const commandArgs = args._.slice(1) || []
+
+args.h && process.exit(help())
+args.v && process.exit(version())
+args.V && process.exit(version())
 
 switch (subCommand) {
   case 'ls':
@@ -12,6 +17,8 @@ switch (subCommand) {
   case 'use':
     use(commandArgs[0])
     break
+  default:
+    help()
 }
 
 function list () {
@@ -21,12 +28,12 @@ function list () {
       return console.error(`'${cmd}' error: ${error}`)
     }
 
-    for (let name in registries) {
-      const reg = registries[name].registry
+    Object.keys(registries).map(k => {
+      const reg = registries[k].registry
       const currentTag = reg === stdout.trim() ? ' * ' : '   '
-      const lineOutput = currentTag + `${name} - ${reg}`
+      const lineOutput = currentTag + `${padEnd(k, 10)} ${reg}`
       process.stdout.write('\n' + lineOutput)
-    }
+    })
     process.stdout.write('\n\n')
 
     if (stderr) {
@@ -46,7 +53,30 @@ function use (registryAlias) {
       if (error) {
         return console.error(`'${cmd}' error: ${error}`)
       }
-      process.stdout.write(`\nRegistry has been set to: ${registry.registry}\n\n`)
+      console.log(`Registry has been set to: ${registry.registry}\n`)
     })
   }
+}
+
+function help () {
+  console.log(`
+    Usage: nrm [options] [command]
+
+    Commands:
+
+      ls                           List all available registries
+      use <registry>               Change npm registry to <registry>
+      help                         Print this help
+
+    Options:
+
+      -h, --help     output usage information
+      -V, --version  output the version number
+  `)
+  return 0
+}
+
+function version () {
+  console.log('v' + require('./package.json').version)
+  return 0
 }
