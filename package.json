@@ -1,12 +1,12 @@
 {
-  "name": "nr",
+  "name": "@amio/nr",
   "version": "1.0.0",
-  "description": "npm remote switcher.",
+  "description": "npm registry switcher.",
   "bin": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\""
   },
-  "keywords": [],
+  "keywords": ["npm", "registry", "manager", "switcher"],
   "author": "Amio <amio.cn@gmail.com>",
   "license": "ISC",
   "dependencies": {

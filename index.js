@@ -53,14 +53,14 @@ function use (registryAlias) {
       if (error) {
         return console.error(`'${cmd}' error: ${error}`)
       }
-      console.log(`Registry has been set to: ${registry.registry}\n`)
+      console.log(`\nRegistry has been set to: ${registry.registry}\n`)
     })
   }
 }
 
 function help () {
   console.log(`
-    Usage: nrm [options] [command]
+    Usage: nr [command]
 
     Commands:
 
