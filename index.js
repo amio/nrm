@@ -10,7 +10,7 @@ const commandArgs = args._.slice(1) || []
 
 args.h && process.exit(help())
 args.v && process.exit(version())
-args.V && process.exit(version())
+args.version && process.exit(version())
 
 switch (subCommand) {
   case 'ls':
@@ -66,14 +66,14 @@ function help () {
 
     Commands:
 
-      ls                           List all available registries
-      use <registry>               Change npm registry to <registry>
-      help                         Print this help
+      ls                List all available registries
+      use <registry>    Change npm registry to <registry>
+      help              Print this help
 
     Options:
 
-      -h, --help     output usage information
-      -V, --version  output the version number
+      -h, --help        output usage information
+      -v, --version     output the version number
   `)
   return 0
 }
