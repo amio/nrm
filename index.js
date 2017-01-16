@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const padEnd = require('string.prototype.padend')
 const exec = require('child_process').exec
 const args = require('minimist')(process.argv.slice(2))

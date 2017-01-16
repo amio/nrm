@@ -2,6 +2,7 @@
   "name": "@amio/nr",
   "version": "1.0.0",
   "description": "npm registry switcher.",
+  "repository": "amio/nr",
   "bin": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\""
