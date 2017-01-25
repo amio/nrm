@@ -1,6 +1,6 @@
 # nr [![npm-version][npm-badge]][npm-link]
 
-Minimal npm registry switcher.
+Minimal npm registry switcher. (Like `nrm` but without bundling a huge `npm`.)
 
 ### Install
 
@@ -22,7 +22,7 @@ Commands:
 Options:
 
   -h, --help     output usage information
-  -V, --version  output the version number
+  -v, --version  output the version number
 ```
 
 ### license
