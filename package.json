@@ -1,6 +1,6 @@
 {
   "name": "@amio/nr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "npm registry switcher.",
   "repository": "amio/nr",
   "bin": "index.js",
