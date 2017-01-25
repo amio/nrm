@@ -27,7 +27,7 @@ Options:
 
 ### license
 
-MIT © [Amio][author]
+ISC © [Amio][author]
 
 [npm-badge]:  https://img.shields.io/npm/v/@amio/nrm.svg?style=flat-square
 [npm-link]:   https://www.npmjs.com/package/@amio/nrm
