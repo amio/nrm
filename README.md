@@ -1,17 +1,17 @@
-# nr [![npm-version][npm-badge]][npm-link]
+# @amio/nrm [![npm-version][npm-badge]][npm-link]
 
-Minimal npm registry switcher. (Like `nrm` but without bundling a huge `npm`.)
+Minimal npm registry manager. (Like `nrm` but without bundling a huge `npm`.)
 
 ### Install
 
 ```
-npm i -g @amio/nr
+npm i -g @amio/nrm
 ```
 
 ### Usage
 
 ```
-Usage: nr [command]
+Usage: nrm [command]
 
 Commands:
 
@@ -29,6 +29,6 @@ Options:
 
 MIT © [Amio][author]
 
-[npm-badge]:  https://img.shields.io/npm/v/@amio/nr.svg?style=flat-square
-[npm-link]:   https://www.npmjs.com/package/@amio/nr
+[npm-badge]:  https://img.shields.io/npm/v/@amio/nrm.svg?style=flat-square
+[npm-link]:   https://www.npmjs.com/package/@amio/nrm
 [author]:     https://github.com/amio

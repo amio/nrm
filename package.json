@@ -1,8 +1,8 @@
 {
-  "name": "@amio/nr",
+  "name": "@amio/nrm",
   "version": "1.0.1",
   "description": "npm registry switcher.",
-  "repository": "amio/nr",
+  "repository": "amio/nrm",
   "bin": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\""

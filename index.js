@@ -47,22 +47,24 @@ function list () {
 function use (registryAlias) {
   const registry = registries[registryAlias]
   if (!registry) {
-    process.stdout.write(`Unknown registry alias: ${registryAlias}`)
+    console.log(`\n  Unknown registry alias: ${registryAlias}\n`)
     process.exit(1)
   } else {
     const cmd = `npm config set registry ${registry.registry}`
     exec(cmd, (error, stdout, stderr) => {
       if (error) {
-        return console.error(`'${cmd}' error: ${error}`)
+        console.error(`'${cmd}' error: ${error}`)
+        process.exit(2)
+      } else {
+        console.log(`\n  Registry has been set to: ${registry.registry}\n`)
       }
-      console.log(`\nRegistry has been set to: ${registry.registry}\n`)
     })
   }
 }
 
 function help () {
   console.log(`
-    Usage: nr [command]
+    Usage: nrm [command]
 
     Commands:
 
