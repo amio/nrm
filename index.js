@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
+const registries = require('npm-mirrors')
 const padEnd = require('string.prototype.padend')
 const exec = require('child_process').exec
-const args = require('minimist')(process.argv.slice(2))
 
-const registries = require('./registries.json')
+const args = require('minimist')(process.argv.slice(2))
 const subCommand = args._[0] || ''
 const commandArgs = args._.slice(1) || []
 

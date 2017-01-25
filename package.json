@@ -7,11 +7,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\""
   },
-  "keywords": ["npm", "registry", "manager", "switcher"],
+  "keywords": [
+    "npm",
+    "registry",
+    "manager",
+    "switcher"
+  ],
   "author": "Amio <amio.cn@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "minimist": "^1.2.0",
+    "npm-mirrors": "^1.0.0",
     "string.prototype.padend": "^3.0.0"
   }
 }
