@@ -1,5 +1,7 @@
 # @amio/nrm [![npm-version][npm-badge]][npm-link]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/amio/nrm.svg)](https://greenkeeper.io/)
+
 Minimal npm registry manager. (Like `nrm` but without bundling a huge `npm`.)
 
 ### Install
